@@ -3,10 +3,13 @@ name = "rust-server"
 version = "0.2.0"
 authors = ["arkenstone <selrach999@gmail.com>"]
 edition = "2021"
-description = "A secure HTTP server built with Rust using rate limiting, security headers, and path validation"
+description = "A secure HTTPS server built with Rust using TLS, rate limiting, security headers, and path validation"
 
 [dependencies]
 tokio = { version = "1.0", features = ["full"] }
+tokio-rustls = "0.24"
+rustls = "0.21"
+rustls-pemfile = "1.0"
 mime_guess = "2.0"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
